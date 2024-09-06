@@ -6,7 +6,7 @@
     <title>Quishing Awareness Adventure</title>
     <style>
         body {
-            font-family: 'Arial Rounded MT Bold', 'Comic Sans MS', cursive, sans-serif; /* Friendly font */
+            font-family: 'Arial Rounded MT Bold', 'Comic Sans MS', cursive, sans-serif;
             margin: 0;
             padding: 20px;
             display: flex;
@@ -14,27 +14,26 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: #fff; /* White background for overall page */
+            background: #f0f8ff; /* Light background for better contrast */
         }
 
         /* Cute styles for welcome and credential form */
         .cute {
-            background: linear-gradient(to bottom right, #ffccff, #ccffff); /* Colorful gradient */
+            background: linear-gradient(to bottom right, #ffccff, #ccffff);
             color: #333;
             border-radius: 25px;
-            padding: 40px 20px; /* Increased padding for better spacing */
+            padding: 40px 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
-            margin: 20px auto; /* Center margin */
-            max-width: 450px; /* Increased max width for better fit */
-            position: relative; /* Position for background images */
-            border: 5px solid #ff6f61; /* Wider border */
+            margin: 20px auto;
+            max-width: 450px;
+            border: 5px solid #ff6f61;
         }
 
         .cute h1 {
-            color: #ff6f61; /* Cute pinkish color */
+            color: #ff6f61;
             font-size: 2.5em;
-            margin-bottom: 15px; /* Adjusted margin */
+            margin-bottom: 15px;
         }
 
         .cute p {
@@ -44,10 +43,10 @@
 
         .cute button {
             padding: 12px 20px;
-            background-color: #ff6f61; /* Button color */
+            background-color: #ff6f61;
             color: white;
             border: none;
-            border-radius: 25px; /* Rounded corners */
+            border-radius: 25px;
             cursor: pointer;
             transition: background-color 0.3s;
             width: 90%;
@@ -57,42 +56,25 @@
         }
 
         .cute button:hover {
-            background-color: #ff8a65; /* Lighter pink on hover */
-        }
-
-        /* Add cute icons */
-        .cute::before {
-            content: '🌈'; /* Rainbow icon */
-            font-size: 4em;
-            position: absolute;
-            top: -30px;
-            left: 10px;
-        }
-
-        .cute::after {
-            content: '✨'; /* Sparkle icon */
-            font-size: 4em;
-            position: absolute;
-            bottom: -30px;
-            right: 10px;
+            background-color: #ff8a65;
         }
 
         /* Serious styles for gotcha and tips pages */
         .serious {
-            background: linear-gradient(to bottom right, #ffcccc, #ff6666); /* Red gradient */
-            color: #660000; /* Dark red text */
+            background: linear-gradient(to bottom right, #ffcccc, #ff6666);
+            color: #660000;
             border-radius: 25px;
-            padding: 40px 20px; /* Increased padding for better spacing */
+            padding: 40px 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            margin: 20px auto; /* Centered margin for containers */
-            max-width: 450px; /* Increased max width for better fit */
-            border: 5px solid #b22222; /* Wider border */
+            margin: 20px auto;
+            max-width: 450px;
+            border: 5px solid #b22222;
+            text-align: center; /* Center align by default */
         }
 
         .serious h1 {
             font-size: 2.5em;
-            margin-bottom: 15px; /* Adjusted margin */
+            margin-bottom: 15px;
         }
 
         .serious p {
@@ -102,10 +84,10 @@
 
         .serious button {
             padding: 12px 20px;
-            background-color: #b22222; /* Dark red button color */
+            background-color: #b22222;
             color: white;
             border: none;
-            border-radius: 25px; /* Rounded corners */
+            border-radius: 25px;
             cursor: pointer;
             transition: background-color 0.3s;
             width: 90%;
@@ -115,7 +97,7 @@
         }
 
         .serious button:hover {
-            background-color: #dc143c; /* Lighter red on hover */
+            background-color: #dc143c;
         }
 
         /* Common styles for inputs */
@@ -123,8 +105,8 @@
             padding: 12px;
             width: 90%;
             max-width: 350px;
-            border: 2px solid #ff6f61; /* Cute border */
-            border-radius: 20px; /* Rounded corners */
+            border: 2px solid #ff6f61;
+            border-radius: 20px;
             display: block;
             margin: 10px auto;
             font-size: 16px;
@@ -132,7 +114,7 @@
         }
 
         input:focus {
-            border-color: #ff8a65; /* Lighter pink on focus */
+            border-color: #ff8a65;
             outline: none;
         }
 
@@ -140,27 +122,39 @@
         #tips {
             list-style-type: none;
             padding: 0;
-            text-align: left;
+            text-align: left; /* Left align for list items */
             margin: 20px auto;
-            max-width: 350px; /* Set max width for tips list */
+            max-width: 350px;
         }
 
         #tips li {
             margin: 10px 0;
             padding: 10px;
-            border-radius: 10px; /* Rounded corners for tips */
-            background-color: #ffe6e6; /* Light red for tips */
+            border-radius: 10px;
+            background-color: #ffe6e6;
         }
 
         .highlight {
-            color: #d32f2f; /* Dark red for emphasis */
+            color: #d32f2f;
             font-weight: bold;
         }
 
         .story {
             font-style: italic;
-            color: #555; /* Softer color for story text */
+            color: #555;
             margin: 10px 0;
+        }
+        
+        /* Clean tips page styles */
+        .clean-tips {
+            background: linear-gradient(to bottom right, #ffffff, #e0f7fa); /* Soft gradient for a clean look */
+            color: #333;
+            border-radius: 25px;
+            padding: 40px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 450px;
+            text-align: left; /* Left align for content */
         }
     </style>
 </head>
@@ -179,27 +173,28 @@
         <form id="phishingForm">
             <input type="text" name="full_name" placeholder="Full Name" required>
             <input type="number" name="age" placeholder="Age" required>
-            <input type="text" name="address" placeholder="Home Address" required>
+            <input type="email" name="email" placeholder="Email Address" required>
             <input type="text" name="phone_number" placeholder="Phone Number" required>
+            <input type="password" name="password" placeholder="Password" required>
             <button type="button" onclick="showGotcha()">Submit</button>
         </form>
     </div>
 
     <div id="gotcha" class="serious" style="display: none;">
-        <h1>🚨 QUISHING TRAP! YOU'VE BEEN CAUGHT!</h1>
+        <h1>🚨 GOTCHA!</h1>
         <p>Warning! You've just compromised your personal information!</p>
         <p>Quishing is a dangerous type of phishing attack that uses QR codes to deceive unsuspecting users. Here's what could happen with your information:</p>
-        <ul>
+        <ul style="text-align: left;">
             <li>📝 Your full name could be used for identity theft.</li>
             <li>📅 Your age may help hackers bypass security questions.</li>
-            <li>🏡 Your address can be exploited for spam and scams.</li>
+            <li>📧 Your email address can be exploited for spam and scams.</li>
             <li>📞 Your phone number might be sold to telemarketers.</li>
             <li>📱 Scanning malicious QR codes can lead to harmful sites.</li>
         </ul>
         <button onclick="showTips()">Learn How to Protect Yourself</button>
     </div>
 
-    <div id="tipsPage" class="serious" style="display: none;">
+    <div id="tipsPage" class="clean-tips" style="display: none;">
         <h1>🛡️ Tips to Avoid Quishing</h1>
         <p>Here are some tips to keep your information safe:</p>
         <ul id="tips">
