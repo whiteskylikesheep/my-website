@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quishing Awareness Adventure</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+            background-color: #e6f7ff; /* Light blue background */
+        }
+        h1 {
+            color: #4a90e2;
+        }
+        p {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        input {
+            margin-top: 10px;
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: block;
+            margin: 10px auto;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #357ab8;
+        }
+        #welcome, #credentialForm, #gotcha {
+            display: none;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+        #welcome {
+            background-color: #f0e5ff; /* Pastel background */
+        }
+        #gotcha {
+            background-color: #ffe5e5; /* Pastel background */
+        }
+        #tips {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        #tips li {
+            margin: 10px 0;
+            font-size: 16px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .highlight {
+            color: #dc3545; /* Red for emphasis */
+            font-weight: bold;
+        }
+        .animated {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .story {
+            font-style: italic;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="welcome" class="animated">
+        <h1>🎉 CONGRATULATIONS!</h1>
+        <p>You’ve just entered the Quishing Awareness Adventure!</p>
+        <p>To claim your Montigo Tumblr, you must first navigate the treacherous waters of online security.</p>
+        <p>Are you ready to uncover the secrets of staying safe from phishing attacks?</p>
+        <button onclick="showForm()">Claim Your Gift</button>
+    </div>
+
+    <div id="credentialForm" class="animated">
+        <h1>📋 Your Information</h1>
+        <p>Please provide the following details:</p>
+        <form id="phishingForm">
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <input type="text" name="address" placeholder="Home Address" required>
+            <input type="text" name="phone_number" placeholder="Phone Number" required>
+            <button type="button" onclick="showGotcha()">Submit</button>
+        </form>
+        <p class="story">*Be cautious with your personal info; it can be misused!* </p>
+    </div>
+
+    <div id="gotcha" class="animated">
+        <h1>🎭 CAUGHT IN THE PHISHING NET!</h1>
+        <p>Oh no! You've just shared your personal information!</p>
+        <p>Imagine a sneaky hacker sitting behind a computer, ready to exploit your details. What would they do with:</p>
+        <ul>
+            <li>📝 Your full name to create a fake identity?</li>
+            <li>📅 Your age to guess security questions?</li>
+            <li>🏡 Your address to send phishing mail?</li>
+            <li>📞 Your phone number for spam calls?</li>
+        </ul>
+        <p>But don't worry! This was just a simulation to help you learn.</p>
+        <p>Here are some tips to avoid falling into the phishing trap:</p>
+        <ul id="tips">
+            <li>🔍 Always scrutinize links before clicking.</li>
+            <li>📧 Verify the sender's email address carefully.</li>
+            <li>❌ Avoid sharing sensitive information via email or unverified websites.</li>
+            <li⚠️ If something seems off, trust your instincts and don’t engage.</li>
+            <li>🛡️ Use two-factor authentication where possible for added security.</li>
+            <li>👀 Regularly monitor your accounts for any suspicious activity.</li>
+        </ul>
+        <p class="highlight">Stay vigilant to protect your information!</p>
+        <p class="story">Note: This was a simulation to raise awareness about phishing!</p>
+        <button onclick="showWelcome()">Back to Start</button>
+    </div>
+
+    <script>
+        // Show the welcome page when the script loads
+        document.getElementById('welcome').style.display = 'block';
+
+        function showForm() {
+            document.getElementById('welcome').style.display = 'none'; // Hide welcome
+            document.getElementById('credentialForm').style.display = 'block'; // Show form
+        }
+
+        function showGotcha() {
+            document.getElementById('credentialForm').style.display = 'none'; // Hide form
+            document.getElementById('gotcha').style.display = 'block'; // Show "Gotcha" message
+        }
+
+        function showWelcome() {
+            document.getElementById('gotcha').style.display = 'none'; // Hide gotcha
+            document.getElementById('welcome').style.display = 'block'; // Show welcome
+        }
+    </script>
+
+</body>
+</html>
