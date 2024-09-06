@@ -8,27 +8,32 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
+            padding: 20px; /* Reduced padding for mobile */
             margin: 0;
             background-color: #e6f7ff; /* Light blue background */
         }
+
         h1 {
             color: #4a90e2;
+            font-size: 24px; /* Adjusted font size for headers */
         }
+
         p {
-            font-size: 18px;
-            margin: 20px 0;
+            font-size: 16px; /* Adjusted font size for paragraphs */
+            margin: 15px 0;
         }
+
         input {
             margin-top: 10px;
             padding: 10px;
-            width: 80%;
+            width: 90%; /* Increased width for better fit on mobile */
             max-width: 300px;
             border: 1px solid #ccc;
             border-radius: 4px;
             display: block;
             margin: 10px auto;
         }
+
         button {
             padding: 10px 20px;
             background-color: #4a90e2;
@@ -37,23 +42,31 @@
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            width: 90%; /* Adjusted button width for mobile */
+            max-width: 300px;
         }
+
         button:hover {
             background-color: #357ab8;
         }
+
         #welcome, #credentialForm, #gotcha {
             display: none;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             background: white;
+            margin: 10px; /* Added margin for better spacing */
         }
+
         #welcome {
             background-color: #f0e5ff; /* Pastel background */
         }
+
         #gotcha {
             background-color: #ffe5e5; /* Pastel background */
         }
+
         #tips {
             list-style-type: none;
             padding: 0;
@@ -61,6 +74,7 @@
             margin: 20px auto;
             max-width: 400px;
         }
+
         #tips li {
             margin: 10px 0;
             font-size: 16px;
@@ -69,17 +83,21 @@
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .highlight {
             color: #dc3545; /* Red for emphasis */
             font-weight: bold;
         }
+
         .animated {
             animation: fadeIn 0.8s ease-in-out;
         }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
         .story {
             font-style: italic;
             color: #333;
